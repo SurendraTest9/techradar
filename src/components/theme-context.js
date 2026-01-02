@@ -27,7 +27,7 @@ export function getColorScale(colorScaleIndex) {
         return DEFAULT_COLOR_SCHEME_INDEX;
     }
 
-    return scaleOrdinal(d3Scales[colorScales[colorScaleIndex].name]);
+    //return scaleOrdinal(d3Scales[colorScales[colorScaleIndex].name]);
 }
 
 export const ThemeContext = React.createContext({
