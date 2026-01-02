@@ -1,7 +1,7 @@
 import * as React from "react";
 //import { scaleOrdinal } from "d3-scale";
 //export { scaleOrdinal } from "d3-scale";
-import * as d3Scales from 'd3-scale-chromatic'
+//import * as d3Scales from 'd3-scale-chromatic'
 
 export const colorScales = [
     {"name": "schemeCategory10"},
