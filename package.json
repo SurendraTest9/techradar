@@ -7,6 +7,11 @@
     "type": "module",
     "url": "https://github.com/SurendraTest9/techradar.git"
   },
+  "jest": {
+    "transformIgnorePatterns": [
+      "/node_modules/(?!(d3|d3-scale|d3-array|d3-format|d3-interpolate|d3-time|d3-color|internmap|delaunator|robust-predicates)/)"
+    ]
+  },
   "keywords": [
     "d3",
     "storybook",
