@@ -1,6 +1,5 @@
 import * as React from "react";
-export { scaleOrdinal } from 'd3-scale';
-export * as d3Scales from 'd3-scale-chromatic'
+const { scaleOrdinal, d3Scales } = require('../d3-shim.cjs');
 
 export const colorScales = [
     {"name": "schemeCategory10"},
