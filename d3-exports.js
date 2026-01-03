@@ -1,5 +1,5 @@
-// re-export the symbol from d3-scale so other modules import from your single entry
-export { scaleOrdinal } from 'd3-scale';
+import * as React from "react";
 
-// optionally re-export others
-export * as d3ScaleChromatic from 'd3-scale-chromatic';
+export { scaleOrdinal } from 'd3-scale';
+import * as _d3Scales from 'd3-scale-chromatic';
+export const d3Scales = _d3Scales;
