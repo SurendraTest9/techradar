@@ -1,3 +1,4 @@
+// src/d3-shim.cjs
 const d3Scale = require('d3-scale');
 const d3ScaleChromatic = require('d3-scale-chromatic');
 
