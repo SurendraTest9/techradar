@@ -1,7 +1,6 @@
 import * as React from "react";
-//import { scaleOrdinal } from "d3-scale";
-//export { scaleOrdinal } from "d3-scale";
-//import * as d3Scales from 'd3-scale-chromatic'
+import { scaleOrdinal } from "d3-scale";
+import * as d3Scales from 'd3-scale-chromatic'
 
 export const colorScales = [
     {"name": "schemeCategory10"},
@@ -27,7 +26,7 @@ export function getColorScale(colorScaleIndex) {
         return DEFAULT_COLOR_SCHEME_INDEX;
     }
 
-    //return scaleOrdinal(d3Scales[colorScales[colorScaleIndex].name]);
+    return scaleOrdinal(d3Scales[colorScales[colorScaleIndex].name]);
 }
 
 export const ThemeContext = React.createContext({
