@@ -1,13 +1,16 @@
 module.exports = {
   transform: {
-    '^.+\\.jsx?$': 'babel-jest',
-    '^.+\\.tsx?$': 'babel-jest',
+    '^.+\\.jsx?$': ['babel-jest', { configFile: './babel.config.cjs' }],
     '^.+\\.mjs$': 'babel-jest'
   },
-  // allow Jest to transform ESM d3 packages (adjust the pattern to include other packages if needed)
+  extensionsToTreatAsEsm: ['.js'],
+  globals: {
+    'babel-jest': {
+      useESM: true
+    }
+  },
   transformIgnorePatterns: [
     '<rootDir>/node_modules/(?!(d3-.*)/)'
   ],
-  moduleFileExtensions: ['js','jsx','mjs','ts','tsx','json','node'],
   testEnvironment: 'jsdom'
 };
