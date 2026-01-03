@@ -7,6 +7,5 @@ const App = AppModule && AppModule.default ? AppModule.default : AppModule;
 
 test('App renders without crashing', () => {
   render(React.createElement(App));
-  // Basic assertion to ensure render succeeded (adjust to a real assertion for your app)
   expect(true).toBe(true);
 });
