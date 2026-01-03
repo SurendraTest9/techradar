@@ -1,5 +1,5 @@
 const React = require('react');
-const { scaleOrdinal, d3Scales } = require('./d3-shim.cjs');
+const { scaleOrdinal, d3Scales } = require('../d3-shim.cjs');
 const { render, screen } = require('@testing-library/react');
 
 const AppModule = require('./App');
