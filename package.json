@@ -4,7 +4,7 @@
   "version": "0.1.28",
   "author": "Omer Gurarslan <omerg@lucidcode.com.tr> (https://omerg.info)",
   "repository": {
-    "type": "git",
+    "type": "module",
     "url": "https://github.com/SurendraTest9/techradar.git"
   },
   "keywords": [
