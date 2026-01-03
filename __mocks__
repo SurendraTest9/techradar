@@ -1,0 +1,4 @@
+module.exports = {
+  scaleOrdinal: jest.fn(() => () => 'mocked-scale'),
+  // Add other d3-scale exports you use
+};
