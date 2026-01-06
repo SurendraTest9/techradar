@@ -1,14 +1,18 @@
-jest.mock('d3-scale');
-jest.mock('d3-scale-chromatic');
+import React from 'react';
+import {render, screen} from '@testing-library/react';
+import '@testing-library/jest-dom';
+import App from './App';
 
-const React = require('react');
-const d3Shim = require('../d3-shim.cjs'); // this will use the mocks
-const { render } = require('@testing-library/react');
 
-const AppModule = require('./App');
-const App = AppModule && AppModule.default ? AppModule.default : AppModule;
+jest.mock('react-tech-radar', () => () => <div data-testid="radar" />, { virtual: true } );
+describe('App (Tech Radar)', () => {
+  test('renders the Tech Radar header', () => {
+    render(<App />);
+    expect(screen.getByText(/CBG Tech Radar/i)).toBeInTheDocument();
+  });
 
-test('App renders without crashing', () => {
-  render(React.createElement(App));
-  expect(true).toBe(true);
+  test('renders the Radar component (mocked)', () => {
+    render(<App />);
+    expect(screen.getByTestId('radar')).toBeInTheDocument();
+  });
 });

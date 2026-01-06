@@ -1,35 +1,21 @@
 import React from 'react';
-import Radar from "./components/Radar/Radar";
+import Radar from 'react-tech-radar';
 
-function App() {
+export default function App() {
 
-    const setup = {
-        rings: ['adopt', 'trial', 'assess', 'hold'],
-        quadrants: ['tools', 'techniques', 'platforms', 'languages'],
-        data: [
-            {
-                name: 'D3',
-                quadrant: 'tools',
-                ring: "assess"
-            },
-            {
-                name: 'TypeScript',
-                quadrant: 'languages',
-                ring: "trial"
-            },
-            {
-                name: 'Storybook',
-                quadrant: 'tools',
-                ring: "adopt"
-            }
-        ]
-    };
-
+    const GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1N-dKXKWsrFH4lhunFEQ8dWn2VHcakzW7tnGBLRXl9GQ/edit";
     return (
-        <div className="App">
-            <Radar {...setup} />
+        <div style = {{ padding: '20px' }}>
+            <h1>CBG Tech Radar</h1> 
+            <Radar 
+              rings={['adopt', 'trial', 'assess', 'hold']}
+              quadrants={['Tools', 'Techniques', 'Platforms', 'Languages & Framework']}
+              dataUrl={GOOGLE_SHEET_URL}
+              width={1200}
+              fontSize={12}
+            />
         </div>
     );
 }
 
-export default App;
+

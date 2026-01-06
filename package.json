@@ -2,18 +2,21 @@
   "name": "react-tech-radar",
   "description": "A React Component for Tech Radar inspired by ThoughtWorks' technology decision sharing project",
   "version": "0.1.28",
-  "author": "Omer Gurarslan <omerg@lucidcode.com.tr> (https://omerg.info)",
+  "author": "Surendra",
+  "license": "MIT",
   "repository": {
-    "type": "module",
+    "type": "git",
     "url": "https://github.com/SurendraTest9/techradar.git"
-  },
-  "jest": {
-    "transformIgnorePatterns": [
-      "node_modules/(?!(d3-scale)/)"
-    ]
   },
   "keywords": [
     "d3",
+    "d3-module",
+    "scale",
+    "visualization",
+    "react",
+    "react-component",
+    "tech radar",
+    "color",
     "storybook",
     "technology radar"
   ],
@@ -37,10 +40,12 @@
     ]
   },
   "dependencies": {
+    "d3": "^7.9.0",
     "d3-color": "^3.1.0",
-    "d3-scale": "^4.0.2",
-    "d3-scale-chromatic": "^3.0.0",
-    "d3-shape": "^3.2.0"
+    "d3-scale": "github:d3/d3-scale#v4.0.2",
+    "d3-scale-chromatic": "^3.1.0",
+    "d3-shape": "^3.2.0",
+    "react-tech-radar": "^0.1.34"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -53,7 +58,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build-java": "javac src/java/MyApp.java",
+    "run-dotnet": "dotnet run --project ./dotnet/MyApp.csproj",
+    "docker-build": "docker build -t techradar .",
+    "docker-run": "docker run -p 3000:3000 techradar"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -78,18 +87,19 @@
     "@babel/plugin-syntax-optional-chaining": "^7.8.3",
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-react": "^7.18.6",
-    "@storybook/addon-essentials": "^7.0.4",
-    "@storybook/addon-interactions": "^7.0.4",
-    "@storybook/addon-links": "^7.0.4",
-    "@storybook/addons": "^7.0.4",
-    "@storybook/react": "^7.0.4",
-    "@storybook/react-webpack5": "^7.0.4",
+    "@storybook/addon-essentials": "^8.6.15",
+    "@storybook/addon-interactions": "^7.6.20",
+    "@storybook/addon-links": "^8.6.15",
+    "@storybook/react": "^8.6.15",
+    "@storybook/react-webpack5": "^8.6.15",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.1",
+    "@types/d3-scale-chromatic": "^3.1.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
-    "storybook": "^7.0.4",
     "styled-components": "^5.3.9",
-    "tabletop": "^1.6.3"
+    "tabletop": "^1.6.2"
   }
 }
