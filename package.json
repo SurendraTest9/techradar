@@ -45,6 +45,7 @@
     "d3-scale": "github:d3/d3-scale#v4.0.2",
     "d3-scale-chromatic": "^3.1.0",
     "d3-shape": "^3.2.0",
+    "papaparse": "^5.5.3",
     "react-tech-radar": "^0.1.34"
   },
   "peerDependencies": {
@@ -54,15 +55,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "NODE_ENV=production && rm -rf dist && mkdir dist && babel src/components --out-dir dist --copy-files",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "build-java": "javac src/java/MyApp.java",
-    "run-dotnet": "dotnet run --project ./dotnet/MyApp.csproj",
-    "docker-build": "docker build -t techradar .",
-    "docker-run": "docker run -p 3000:3000 techradar"
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": "react-app"
